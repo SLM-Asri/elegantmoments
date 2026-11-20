@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Dashboard | Elegant Moments Admin</title>
+<link rel="icon" href="../assets/images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <img src="../assets/images/logo/em-monogram-gold.png" alt="" width="500" height="333">
+    <div class="brand">Elegant Moments</div>
+    <nav id="nav">
+      <button data-tab="overview" class="on">Overview</button>
+      <button data-tab="bookings">Bookings <span class="badge" id="b-pending" hidden></span></button>
+      <button data-tab="messages">Messages <span class="badge" id="b-msg" hidden></span></button>
+      <button data-tab="dates">Blocked dates</button>
+      <button data-tab="settings">Settings</button>
+    </nav>
+    <div class="who"><b id="who-name">…</b><span id="who-email"></span><br><button class="btn btn--ghost btn--sm" id="logout" style="margin-top:10px;color:#e9dfc6;border-color:#4a412e">Sign out</button></div>
+  </aside>
+  <main class="main">
+    <div class="top"><div><button class="btn btn--ghost btn--sm menu-btn" id="menu">☰ Menu</button> <h2 id="title">Overview</h2></div><a href="../" target="_blank" rel="noopener">View website ↗</a></div>
+    <section id="tab-overview"></section>
+    <section id="tab-bookings" hidden></section>
+    <section id="tab-messages" hidden></section>
+    <section id="tab-dates" hidden></section>
+    <section id="tab-settings" hidden></section>
+  </main>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal__box" id="modal-box"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="admin.js"></script>
+</body>
+</html>

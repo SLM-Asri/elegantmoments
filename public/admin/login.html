@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin sign in | Elegant Moments</title>
+<link rel="icon" href="../assets/images/brand/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main class="login">
+  <form class="login__card" id="f" novalidate>
+    <img src="../assets/images/logo/em-monogram-black.png" alt="Elegant Moments" width="500" height="333">
+    <h1>Admin</h1>
+    <p class="sub">Sign in to manage bookings and messages</p>
+    <div class="msg err" id="err" role="alert"></div>
+    <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="username" required autofocus></div>
+    <div class="field"><label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" required></div>
+    <button class="btn" style="width:100%" id="go" type="submit">Sign in</button>
+  </form>
+</main>
+<script>
+(function(){
+  var f=document.getElementById('f'),err=document.getElementById('err'),go=document.getElementById('go');
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); err.classList.remove('show'); go.disabled=true;
+    fetch('/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',
+      body:JSON.stringify({email:document.getElementById('email').value,password:document.getElementById('pw').value})})
+    .then(function(r){return r.json().catch(function(){return{ok:false}})})
+    .then(function(j){ if(j.ok){location.href='./';return;} err.textContent=j.error||'Sign in failed.'; err.classList.add('show'); })
+    .catch(function(){err.textContent='Cannot reach the server.';err.classList.add('show');})
+    .then(function(){go.disabled=false;});
+  });
+})();
+</script>
+</body>
+</html>

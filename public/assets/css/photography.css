@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Elegant Moments PHOTOGRAPHY — bright ivory + soft champagne gold
+   ========================================================================== */
+.theme-photo{background:var(--ivory)}
+.theme-photo .h1 em,.theme-photo .h2 em,.theme-photo .display em,.theme-photo .h3 em{color:var(--gold-deep)}
+.theme-photo .hero--light .display em{color:var(--gold-deep)}
+.theme-photo .section--ink h2 em,.theme-photo .cta h2 em,.theme-photo .page-head--dark h1 em{background:var(--gold-grad);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.theme-photo .hero__visual::before{border-color:var(--gold)}
+.theme-photo .hero__visual .badge{background:var(--ivory);color:var(--gold-deep);border-color:var(--gold)}
+.theme-photo .page-head--light .h1{color:var(--charcoal)}
+.theme-photo .page-head--light .h1 em{color:var(--gold-deep)}
+
+/* Soft arch trio for the studio overview */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4vw,34px);align-items:end}
+.trio .arch{aspect-ratio:1/1;overflow:hidden;position:relative}
+.trio .arch:nth-child(2){aspect-ratio:1/1.2}
+.trio .arch img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.trio .arch:hover img{transform:scale(1.06)}
+
+/* Occasion list on the studio overview */
+.occ{display:grid;border-top:1px solid var(--line)}
+.occ a{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:20px;padding:30px 4px;border-bottom:1px solid var(--line);transition:padding .5s var(--ease),background .5s}
+.occ a:hover{padding-left:22px;padding-right:22px;background:linear-gradient(90deg,rgba(201,169,106,.16),transparent)}
+.occ__n{font-family:var(--serif);font-size:20px;color:var(--gold-deep);letter-spacing:.2em}
+.occ__t{font-family:var(--serif);font-size:clamp(28px,3.6vw,48px);line-height:1.05;font-weight:400}
+.occ__t small{display:block;font-family:var(--sans);font-size:14px;letter-spacing:.02em;color:#7a7364;font-weight:300;margin-top:8px;max-width:60ch}
+.occ svg{width:28px;height:28px;color:var(--gold-deep);transition:transform .5s var(--ease)}
+.occ a:hover svg{transform:translateX(8px)}
+.occ__thumb{display:none}
+
+/* Mood chips on service pages */
+.moods{display:flex;flex-wrap:wrap;gap:12px}
+.moods span{padding:10px 20px;border:1px solid var(--line-gold);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);background:rgba(201,169,106,.08)}
+.theme-wed .moods span{color:var(--gold);background:rgba(201,169,106,.06)}
+
+/* Related services strip */
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px}
+.rel{position:relative;aspect-ratio:1/1;overflow:hidden;display:block;color:var(--ivory)}
+.rel img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.rel::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(22,20,17,.85));transition:opacity .5s}
+.rel:hover img{transform:scale(1.08)}
+.rel span{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;font-family:var(--serif);font-size:26px;line-height:1.1}
+.rel span small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}

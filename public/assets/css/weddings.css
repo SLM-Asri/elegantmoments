@@ -1,0 +1,96 @@
+/* ==========================================================================
+   Elegant Moments WEDDINGS — dark ink + heavy champagne gold
+   ========================================================================== */
+.theme-wed{background:var(--ink);color:#E9E1CF}
+.theme-home{background:var(--ivory);color:var(--charcoal)}
+.theme-wed ::selection,.theme-home ::selection{background:var(--gold);color:var(--ink)}
+.theme-wed html,html:has(.theme-wed),html:has(.theme-home){scrollbar-color:var(--gold) var(--ink)}
+.theme-wed .h1 em,.theme-wed .h2 em,.theme-wed .display em,.theme-wed .h3 em,
+.theme-home .hero-home em,.theme-home .section--ink em,.theme-home .section--charcoal em,.theme-home .cta em,.theme-home .page-head--dark em{background:var(--gold-grad);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shimmer 8s linear infinite;padding-right:.08em}
+.theme-home .section--ivory em,.theme-home .section--beige em,.theme-home .section--sand em{color:var(--gold-deep)}
+.theme-wed .hero .display{color:var(--ivory)}
+
+/* Gold hairline + diamond between sections */
+.theme-wed .section+.section::before,.theme-wed .section+.cta::before,.theme-wed .marquee+.section::before{content:"";position:absolute;left:50%;top:0;width:min(520px,70%);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.theme-wed .section+.section::after{content:"";position:absolute;left:50%;top:-5px;width:9px;height:9px;transform:translateX(-50%) rotate(45deg);background:var(--ink);border:1px solid var(--gold)}
+.theme-wed .section--sand,.theme-wed .section--beige{background:var(--ink-3);color:#E9E1CF}
+.theme-wed .section--sand h2,.theme-wed .section--sand h3,.theme-wed .section--beige h2,.theme-wed .section--beige h3{color:var(--ivory)}
+.theme-wed .section--sand .lead,.theme-wed .section--beige .lead{color:#cbc2ad}
+.theme-wed .eyebrow{color:var(--gold)}
+.theme-wed .lead{color:#cbc2ad}
+.theme-wed .btn--outline{color:var(--gold)}
+.theme-wed .btn--outline:hover{color:var(--ink)}
+.theme-wed .link-arrow{color:var(--gold)}
+.theme-wed .split__copy p,.theme-wed .checks li{color:#cbc2ad}
+.theme-wed .overlap{border-color:var(--ink)}
+.theme-wed .gframe::before{border-color:var(--gold);border-width:1px;inset:-18px 18px 18px -18px}
+.theme-wed .gframe::after{content:"";position:absolute;inset:-34px 34px 34px -34px;border:1px solid rgba(201,169,106,.3);z-index:-2;pointer-events:none}
+.theme-wed .gframe.arch::after{border-radius:999px 999px 0 0}
+.theme-wed .card{background:var(--ink-2);border-color:rgba(201,169,106,.3);color:var(--ivory)}
+.theme-wed .card__txt{color:#bdb39b}
+.theme-wed .card__num{color:var(--gold)}
+.theme-wed .card:hover{box-shadow:0 36px 60px -30px rgba(0,0,0,.85),0 0 0 1px var(--gold)}
+.theme-wed .step p{color:#bdb39b}
+.theme-wed .stat span{color:#b9af97}
+.theme-wed .faq__item{border-color:rgba(201,169,106,.28)}
+.theme-wed .faq__q{color:var(--ivory)}
+.theme-wed .faq__q:hover{color:var(--gold)}
+.theme-wed .faq__q .plus::before,.theme-wed .faq__q .plus::after{background:var(--gold)}
+.theme-wed .faq__item.open .plus::before,.theme-wed .faq__item.open .plus::after{background:var(--ink)}
+.theme-wed .faq__a p{color:#c7bea8}
+.theme-wed .faq__a a{color:var(--gold)}
+.theme-wed .tab{color:var(--ivory)}
+.theme-wed .tab.active{color:var(--ink)}
+.theme-wed .ccard,.theme-wed .panel{background:var(--ink-2);border-color:rgba(201,169,106,.35);color:var(--ivory)}
+.theme-wed .ccard svg{color:var(--gold)}
+.theme-wed .ccard p,.theme-wed .ccard a{color:#bdb39b}
+.theme-wed .ccard a.strong{color:var(--ivory)}
+.theme-wed .ccard a:hover{color:var(--gold)}
+.theme-wed .flabel,.theme-wed .field label{color:var(--gold)}
+.theme-wed .field input,.theme-wed .field textarea,.theme-wed .field select{color:var(--ivory);border-color:rgba(201,169,106,.4)}
+.theme-wed .field select option{color:#2B2B2B}
+.theme-wed .pick span{color:#a99f88}
+.theme-wed .pick.on{background:rgba(201,169,106,.14)}
+.theme-wed .direct a{color:var(--ivory)}
+.theme-wed .direct svg{color:var(--gold)}
+.theme-wed .rail-ctl button{color:var(--gold)}
+.theme-wed .rail-ctl button:hover{color:var(--ink)}
+.theme-wed .map{background:var(--ink-2)}
+
+/* Wedding page header: richer gold */
+.theme-wed .page-head--dark{background:radial-gradient(760px 420px at 50% -8%,rgba(201,169,106,.34),transparent 70%),radial-gradient(500px 300px at 100% 100%,rgba(201,169,106,.12),transparent 70%),var(--ink)}
+.theme-wed .page-head--dark::after{content:"";position:absolute;left:50%;bottom:0;width:1px;height:56px;background:linear-gradient(var(--gold),transparent);z-index:2}
+.theme-wed .page-head .container::before{content:"";width:64px;height:1px;background:var(--gold);order:-1}
+
+/* Gold-framed hero */
+.theme-wed .hero__visual .main{border:1px solid var(--gold);padding:8px;background:var(--ink);border-radius:999px 999px 0 0}
+.theme-wed .hero__visual .main img{border-radius:999px 999px 0 0}
+.theme-wed .hero__visual .float{border:0;padding:6px;background:var(--ink);outline:1px solid var(--gold)}
+
+/* Gold corners for gallery shots on the wedding side */
+.theme-wed .shot::before,.theme-wed .shot::after{content:"";position:absolute;width:26px;height:26px;z-index:3;opacity:0;transition:opacity .5s,transform .6s var(--ease);pointer-events:none}
+.theme-wed .shot::before{left:12px;top:12px;border-left:1px solid var(--gold-light);border-top:1px solid var(--gold-light);transform:translate(8px,8px)}
+.theme-wed .shot::after{right:12px;bottom:12px;border-right:1px solid var(--gold-light);border-bottom:1px solid var(--gold-light);transform:translate(-8px,-8px)}
+.theme-wed .shot:hover::before,.theme-wed .shot:hover::after{opacity:1;transform:none}
+.theme-wed .filter{color:var(--ivory)}
+.theme-wed .filter.active{color:var(--ink)}
+
+/* Gold-framed sections: big numerals, timeline */
+.timeline{display:grid;gap:0;position:relative;max-width:900px;margin-inline:auto}
+.timeline::before{content:"";position:absolute;left:34px;top:12px;bottom:12px;width:1px;background:linear-gradient(var(--gold),rgba(201,169,106,.1))}
+.tl{display:grid;grid-template-columns:70px 1fr;gap:28px;padding:22px 0;position:relative}
+.tl__n{width:70px;height:70px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:26px;font-style:italic;color:var(--gold);background:var(--ink);position:relative;z-index:1}
+.tl h3{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--ivory);margin-bottom:6px;line-height:1.1}
+.tl p{color:#bdb39b;font-weight:300}
+
+/* Gold trio emblem */
+.emblem{display:grid;justify-items:center;gap:6px;color:var(--gold)}
+.emblem img{width:92px}
+
+/* Page-specific feature lists with gold numerals */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(16px,2vw,28px)}
+.fcell{position:relative;padding:36px 30px 34px;border:1px solid rgba(201,169,106,.3);background:linear-gradient(180deg,rgba(201,169,106,.07),transparent 70%);transition:border-color .5s,transform .6s var(--ease),background .5s}
+.fcell:hover{border-color:var(--gold);transform:translateY(-6px);background:linear-gradient(180deg,rgba(201,169,106,.14),transparent 80%)}
+.fcell i{display:block;font-family:var(--serif);font-style:italic;font-size:44px;line-height:1;margin-bottom:16px;color:var(--gold);font-weight:300}
+.fcell h3{font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.15;margin-bottom:10px;color:var(--ivory)}
+.fcell p{font-size:15px;color:#bdb39b;font-weight:300}
