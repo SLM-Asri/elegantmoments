@@ -51,7 +51,12 @@
   :root{--nav-h:68px;--gut:20px}
   body{font-size:15.5px}
   .hero-slides{inset:-8% 0}
-  .hs img{object-fit:cover;object-position:50% center;scale:1.14}
+  .hs img{object-fit:cover;object-position:50% center;scale:1.04}
+  .hs:nth-child(1) img{object-position:50% center}
+  .hs:nth-child(2) img{object-position:48% center}
+  .hs:nth-child(3) img{object-position:58% center}
+  .hs:nth-child(4) img{object-position:52% center}
+  .is-loaded .hs.is-active img,.hs.is-in img{animation:hsZoomMobile 16s var(--ease) both}
   .brand img{height:38px}
   .brand__txt{font-size:11px;letter-spacing:.24em}
   .brand__txt small{font-size:8.5px;letter-spacing:.4em}

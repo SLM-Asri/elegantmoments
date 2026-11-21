@@ -156,6 +156,7 @@ main{transition:opacity .5s var(--ease),transform .8s var(--ease)}
 .hs.is-in{clip-path:inset(0);z-index:2}
 .is-loaded .hs.is-active img,.hs.is-in img{animation:hsZoom 16s var(--ease) both}
 @keyframes hsZoom{from{scale:1.14}to{scale:1.02}}
+@keyframes hsZoomMobile{from{scale:1.04}to{scale:1.02}}
 .hero-slides::after{content:"";position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,rgba(22,20,17,.62) 0%,rgba(22,20,17,.34) 38%,rgba(22,20,17,.55) 70%,rgba(22,20,17,.9) 100%),radial-gradient(120% 90% at 50% 45%,transparent 40%,rgba(22,20,17,.55))}
 .hero-slides::before{content:"";position:absolute;inset:0;z-index:5;background:var(--ink);opacity:0;transition:opacity 2.4s var(--ease-io)}
 .js:not(.is-loaded) .hero-slides::before{opacity:1;transition:none}
