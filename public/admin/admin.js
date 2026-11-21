@@ -29,11 +29,18 @@
     Object.keys(tabs).forEach(function (t) { $('#tab-' + t).hidden = t !== tab; });
     $('#title').textContent = tabs[tab];
     $('#side').classList.remove('open');
+    $('#side-scrim').classList.remove('open');
     ({ overview: loadOverview, bookings: loadBookings, messages: loadMessages, dates: loadDates, settings: renderSettings })[tab]();
     history.replaceState(null, '', '#' + tab);
   }
   $('#nav').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) show(b.dataset.tab); });
-  $('#menu').addEventListener('click', function () { $('#side').classList.toggle('open'); });
+  function setMobileMenu(open) {
+    $('#side').classList.toggle('open', open);
+    $('#side-scrim').classList.toggle('open', open);
+  }
+  $('#menu').addEventListener('click', function () { setMobileMenu(!$('#side').classList.contains('open')); });
+  $('#side-close').addEventListener('click', function () { setMobileMenu(false); });
+  $('#side-scrim').addEventListener('click', function () { setMobileMenu(false); });
   $('#logout').addEventListener('click', function () { api('POST', '/logout', {}).then(function () { location.href = '/admin/login.html'; }); });
 
   /* ---------- modal ---------- */
