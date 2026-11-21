@@ -10,7 +10,7 @@
     var o = { method: method, credentials: 'same-origin', headers: {} };
     if (body !== undefined) { o.headers['Content-Type'] = 'application/json'; o.body = JSON.stringify(body); }
     return fetch('/api/admin' + url, o).then(function (r) {
-      if (r.status === 401) { location.href = 'login.html'; return new Promise(function () {}); } // stop the chain while the browser redirects
+      if (r.status === 401) { location.href = '/admin/login.html'; return new Promise(function () {}); } // stop the chain while the browser redirects
       return r.json().catch(function () { return { ok: false, error: 'Bad response' }; });
     });
   }
@@ -34,7 +34,7 @@
   }
   $('#nav').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) show(b.dataset.tab); });
   $('#menu').addEventListener('click', function () { $('#side').classList.toggle('open'); });
-  $('#logout').addEventListener('click', function () { api('POST', '/logout', {}).then(function () { location.href = 'login.html'; }); });
+  $('#logout').addEventListener('click', function () { api('POST', '/logout', {}).then(function () { location.href = '/admin/login.html'; }); });
 
   /* ---------- modal ---------- */
   var modal = $('#modal');
